@@ -1,0 +1,12 @@
+Diferenças entre carbo, proteinas e gorduras:
+https://www.msdmanuals.com/pt-br/casa/dist%C3%BArbios-nutricionais/considera%C3%A7%C3%B5es-gerais-sobre-a-nutri%C3%A7%C3%A3o/carboidratos,-prote%C3%ADnas-e-gorduras
+
+Tabela TACO: 
+https://smartplanilhas.com.br/planilha-gratuita/tabela-de-taco-em-excel-gratis/
+
+Manipular Tabelas com Python:
+https://medium.com/data-hackers/como-manipular-planilhas-excel-com-o-python-6be8799f8dd7
+https://www.hashtagtreinamentos.com/integrar-python-com-excel-python
+
+Calcular macronutrientes: 
+https://www.yopro.com.br/o-que-sao-macronutrientes-e-como-calcula-los/
