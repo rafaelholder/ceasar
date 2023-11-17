@@ -1,11 +1,10 @@
 import time
 
 # IMC = peso / (altura * altura)
-def calcularIMC(): 
+def calcularIMC():
     weight = float(input("Digite seu peso(KG): "))  
-    height = (float(input("Digite sua altura(CM): ")) / 100)
+    height = float(input("Digite sua altura(CM): ")) / 100
     imc = weight / (height ** 2)
-
     return imc
 #Classificar IMC
 def classificarIMC(imc):
@@ -24,11 +23,13 @@ def classificarIMC(imc):
         classe = 'Obesidade grau III'
     else:
         classe = 'Invalido'
+    print('Processando...')
+    time.sleep(2)
     
-    return classe
+    return '\nSeu IMC eh de: {:.1f} \nSua classificação eh: {}'.format(imc, classe)
 
-imc = calcularIMC()
-classeIMC = classificarIMC(imc)
-print('Processando...')
-time.sleep(2)
-print('\nSeu IMC eh de: {:.1f} \nSua classificacao eh: {}'.format(imc, classeIMC))
+# imc = calcularIMC()
+# classeIMC = classificarIMC(imc)
+# print('Processando...')
+# time.sleep(2)
+# print('\nSeu IMC eh de: {:.1f} \nSua classificacao eh: {}'.format(imc, classeIMC))

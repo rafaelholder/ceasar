@@ -28,13 +28,12 @@ while codigo == True:
     \n14 - Leguminosas e derivados;
     '''
     )
-    op = input("Digite o número do grupo de alimentos que você deseja ver: \n")
+    op = input("Digite o número do grupo de alimentos que você deseja ver: ")
 
-
+    print('|INDEX|               |NOME DO ALIMENTO|')
     if op == '1':
         nome_alimento = table.loc[table["Grupo"] == "Cereais e derivados", "Descrição do Alimento"]
         print(nome_alimento)
-        time.sleep(10)
     elif op == "2":
         nome_alimento = table.loc[table["Grupo"] == "Verduras, hortaliças e derivados", "Descrição do Alimento"]
         print(nome_alimento)
@@ -77,6 +76,7 @@ while codigo == True:
         print(f"{nome_alimento} + {carbo}")
     else:
         print("Opção Invalida... \nDigite novamente.")
+    time.sleep(3)
     
 
     

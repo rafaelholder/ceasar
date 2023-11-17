@@ -1,11 +1,11 @@
-def calcularMacroNutri(): 
-
+def calcularMacroNutri():
     proteina = 4 * (float(input("Digite quantas gramas de proteina tem o alimento: "))) 
     carbo = 4 * (float(input("Digite quantas gramas de carboidratos tem o alimento: ")))
     gorduras = 9 * (float(input("Digite quantas gramas de gordura tem o alimento: ")))
 
     calorias_totais = proteina + carbo + gorduras 
-    # print(calorias_totais)
+    #print(calorias_totais)
+
     return calorias_totais
 
 
