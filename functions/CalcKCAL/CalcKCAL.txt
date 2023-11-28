@@ -1,0 +1,2 @@
+Alimento: Banana
+Calorias totais: 34.0

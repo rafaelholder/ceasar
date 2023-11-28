@@ -31,10 +31,11 @@ def classificarIMC(imc):
     return '\nSeu IMC eh de: {:.1f} \nSua classificação eh: {}'.format(imc, classe)
 
 #CONTROLE DE ARQUIVO
+filePath = './functions/IMC/IMC.txt'
 def salvarImc(imc):
-    op = input('Deseja salvar seu IMC em um arquivo(S/N)? ').capitalize()
+    op = input('Deseja salvar seu IMC em um arquivo(S/N)? ').capitalize().strip()
     if op == 'S':
-        f = open('./functions/IMC/IMC.txt', 'w')
+        f = open(filePath, 'w')
         name = input('Digite seu nome: ')
         f.writelines(f'Nome: {name}\nTaxa IMC: {imc:.2f}')
         f.close()
@@ -43,9 +44,9 @@ def salvarImc(imc):
         return
     
 def lerImc():
-    op = input('Deseja ver o IMC que esta salvo(S/N)? ').capitalize()
+    op = input('Deseja ver o IMC que esta salvo(S/N)? ').capitalize().strip()
     if op == 'S':
-        f = open('./functions/IMC/IMC.txt', 'r')
+        f = open(filePath, 'r')
         print(f.read())
         f.close()
         print(time.sleep(2),'Processando...')
@@ -53,7 +54,7 @@ def lerImc():
         return
     
 def deletarImc():
-    f = open('./functions/IMC/IMC.txt', 'w')
+    f = open(filePath, 'w')
     f.writelines('')
     f.close()
     

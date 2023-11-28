@@ -1,6 +1,7 @@
-from functions import CalcMacronNutriente, PlanilhasPythonTACO
+from functions.CalcKCAL import CalcMacronNutriente
 from functions.IMC import CalcIMC 
 from functions.TMB import CalcTaxaMetaBasal
+from functions import PlanilhasPythonTACO
 from time import sleep
 
 
@@ -47,8 +48,8 @@ while ctrlGeneral != 'out':
             try:
                 print('\nOk, vamos calcular quantas calorias tem seus alimentos!')
                 sleep(0.7)
-                nomeAlimento = input('Digite o nome do alimento: ').capitalize()
-                numKCAL = CalcMacronNutriente.calcularMacroNutri()
+                foodName = input('Digite o nome do alimento: ').capitalize().strip()
+                numKCAL = CalcMacronNutriente.calcularMacroNutri(foodName)
                 sleep(0.7)
                 print(f'---\nCalorias: {numKCAL:.2f} kcal.\n---')
                 ctrl = numKCAL
@@ -65,7 +66,7 @@ while ctrlGeneral != 'out':
             except:
                 print('--------\nQualquer valor digitado para calcular as calorias de seu alimento deve ser um numero em formato de digito.\nVerifique e digite novamente.--------')
     elif op == '5':
-        op = input('\tCerteza que deseja sair da aplicação(S/N)? ').capitalize()
+        op = input('\tCerteza que deseja sair da aplicação(S/N)? ').capitalize().strip()
         if op == 'S':
             ctrlGeneral = 'out'
     else:
@@ -74,3 +75,4 @@ while ctrlGeneral != 'out':
     #CONTROLE FINAL DO PROGRAMA
     ctrl = ''
     sleep(2)
+    
