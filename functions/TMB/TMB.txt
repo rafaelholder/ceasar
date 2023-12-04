@@ -1,3 +1,3 @@
-Nome: Rafael
-Idade: 20
-Taxa metabólica basal: 2956.25
+Nome: Rafa
+Idade: 18
+Taxa metabólica basal: 2656.32

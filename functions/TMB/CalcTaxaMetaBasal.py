@@ -1,10 +1,10 @@
 #CALCULADORA DE TAXA METABÓLICA BASAL
 def CalcularTaxaBasal():
     #VARIÁVEIS
-    idade = int(input('Digite a sua idade: ')).strip()
-    altura = float(input('Agora a sua altura(CM): ')).strip()
-    peso = float(input('Agora o seu peso(KG): ')).strip()
-    sexo = int(input('Finalizando, qual é o seu sexo? \n   Digite 1 para Masculino e 2 para Feminino: ')).strip()
+    idade = int(input('Digite a sua idade: '))
+    altura = float(input('Agora a sua altura(CM): '))
+    peso = float(input('Agora o seu peso(KG): '))
+    sexo = int(input('Finalizando, qual é o seu sexo? \n   Digite 1 para Masculino e 2 para Feminino: '))
     msg = '''Qual é a sua taxa de atividade física?
         1 - Sedentários (pouco ou nenhum exercício)
         2 - Levemente ativo (exercício leve 1 a 3 dias por semana)
