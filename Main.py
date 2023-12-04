@@ -1,5 +1,5 @@
 from functions.CalcKCAL import CalcMacronNutriente
-from functions.IMC import CalcIMC 
+from functions.IMC import CalcIMC
 from functions.TMB import CalcTaxaMetaBasal
 from functions import PlanilhasPythonTACO
 from time import sleep
@@ -13,7 +13,8 @@ msg = '''\nMenu:
     2. Calcular taxa metabólica basal
     3. Calcular macronutrientes e calorias de alimentos
     4. Visualizar alimentos e suas informações por grupos
-    5. Sair da aplicação
+    5. Receitas
+    6. Sair da aplicação
     Escolha uma opção: '''
 
 #INICIO DO PROGRAMA
@@ -59,20 +60,47 @@ while ctrlGeneral != 'out':
          while ctrl == '':
             try:
                 print('\nOk, vamos verificar os alimentos e seus grupos!')
-                
+
                 PlanilhasPythonTACO.planilhasTESTE()
 
                 ctrl = 'test'
             except:
                 print('--------\nQualquer valor digitado para calcular as calorias de seu alimento deve ser um numero em formato de digito.\nVerifique e digite novamente.--------')
     elif op == '5':
+            try:
+                msg = """Ok, qual o tipo de refeição desejada?
+                1. Café da manhã
+                2. Almoço
+                3. Jantar
+                4. Voltar ao menu principal
+                """
+                print(msg)
+                option = input('Digite o número da opção desejada: ').strip()
+
+                if option == '1':
+                    print('\n Receita de café da manhã: ')
+                    print('https://www.tudogostoso.com.br/noticias/cafe-da-manha-de-hotel-a7194.htm')
+                if option == '2':
+                    print('\n Receita de almoço: ')
+                    print('https://www.tudogostoso.com.br/receita/41121-picanha-invertida.html')
+                if option == '3':
+                    print('\n Receita de jantar: ')
+                    print('Link para a receita')
+                if option == '4':
+                    op = input('\tCerteza que deseja sair da aplicação(S/N)? ').capitalize().strip()
+                    if op == 'S':
+                        ctrlGeneral = 'out'
+                        ctrl = 'test'
+            except:
+                print('--------\nQualquer valor digitado para calcular as calorias de seu alimento deve ser um numero em formato de digito.\nVerifique e digite novamente.--------')
+    elif op == '6':
         op = input('\tCerteza que deseja sair da aplicação(S/N)? ').capitalize().strip()
         if op == 'S':
             ctrlGeneral = 'out'
     else:
-        print('Opção invalida. Digite novamente...\n')
-    
+        print('Opção inválida. Digite novamente...\n')
+
     #CONTROLE FINAL DO PROGRAMA
     ctrl = ''
     sleep(2)
-    
+
