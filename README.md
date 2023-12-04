@@ -1,2 +1,3 @@
 # BOAS VINDAS!
-## ESTE REPOSITÓRIO MOSTRA O PROJETO DE GERENCIADOR DE ALIMENTAÇÃO FEITO PARA A DISCIPLINA DE PROJETOS 1 DO CURSO DE GTI DA CESAR SCHOOL 2023.2             
+##Este é o repositorio do grupo 6a da disciplica de projetos do curso de GTI CESAR SCHOOL 2023.2
+##Execute o arquivo rq.bat antes de executar o programa(Lá estão os modulos a ser instalados)
