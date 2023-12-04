@@ -6,7 +6,7 @@ import pandas as pd
 #
 #
 #VARIAVEIS
-table = pd.read_excel("Tabela_Taco_Excel\Taco.xlsx")
+table = pd.read_excel("Tabela_Taco_Excel/Taco.xlsx")
 # print(table)
 msg = '''
     1. Cereais e derivados;
@@ -81,6 +81,6 @@ def planilhasTESTE():
             print("Opção Invalida... \nDigite novamente.")
         time.sleep(3)
         codigo = input('Aperte 0 para sair: ')
-    
 
-    
+
+

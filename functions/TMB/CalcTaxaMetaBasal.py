@@ -14,18 +14,20 @@ def CalcularTaxaBasal():
         Digite sua resposta: '''.strip()
 
     fatorAtvFisica = float(input(msg))
-    
-    match fatorAtvFisica:
-        case 1:
-            fatorAtvFisica = 1.2
-        case 2: 
-            fatorAtvFisica = 1.375
-        case 3:
-            fatorAtvFisica = 1.55
-        case 4: 
-            fatorAtvFisica = 1.725
-        case 5:
-            fatorAtvFisica = 1.9
+
+    if fatorAtvFisica == 1:
+        fatorAtvFisica = 1.2
+    elif fatorAtvFisica == 2:
+        fatorAtvFisica = 1.375
+    elif fatorAtvFisica == 3:
+        fatorAtvFisica = 1.55
+    elif fatorAtvFisica == 4:
+        fatorAtvFisica = 1.725
+    elif fatorAtvFisica == 5:
+        fatorAtvFisica = 1.9
+    else:
+        # Tratar o caso em que o valor inserido não é 1, 2, 3, 4 ou 5
+        print("Valor inválido")
 
     if sexo == 1:
         taxaMetabolicaBasal = float(fatorAtvFisica * (66 + (13.7 * peso) + (5 * altura) - (6.8 * idade)))
@@ -35,7 +37,7 @@ def CalcularTaxaBasal():
 
     salvarTMB(tmb=taxaMetabolicaBasal, age=idade)
     lerTMB()
-    
+
     return taxaMetabolicaBasal
 
 #CONTROLE DE ARQUIVO
@@ -49,7 +51,7 @@ def salvarTMB(tmb, age):
         f.close()
     else:
         return
-    
+
 def lerTMB():
     op = input('Deseja ler a taxa metabólica basal que esta salva(S/N)?').capitalize().strip()
     if op == 'S':
@@ -58,7 +60,7 @@ def lerTMB():
         f.close()
     else:
         return
-    
+
 def deletarTMB():
     f = open(filePath, 'w')
     f.writelines('')
