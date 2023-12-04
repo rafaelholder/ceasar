@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Executando o Projeto
 
 ```bash
-python main.py
+python Main.py
 ```
 
 ### Agora é só navegar pelos menus ;) 
