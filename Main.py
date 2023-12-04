@@ -19,7 +19,7 @@ msg = '''\nMenu:
     Escolha uma opção: '''
 
 #INICIO DO PROGRAMA
-print('---\nBem vindo ao CEASAR, o gerenciador saudável!\n---')
+print('---\nBem vindo ao Fitness Assistant, o assistente e gerenciador da sua Saúde!\n---')
 while ctrlGeneral != 'out':
     op = input(msg).strip()
     if op == '1':
