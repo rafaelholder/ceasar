@@ -8,6 +8,7 @@ from time import sleep
 
 #VARIAVEIS DE CONTROLE
 ctrl = ''
+sairFunc = 'SAIDADAFUNÇÃO'
 ctrlGeneral = ''
 msg = '''\nMenu:
     1. Calcular IMC
@@ -23,7 +24,7 @@ print('---\nBem vindo ao Fitness Assistant, o assistente e gerenciador da sua Sa
 while ctrlGeneral != 'out':
     op = input(msg).strip()
     if op == '1':
-        while ctrl == '':
+        while ctrl != sairFunc:
             try:
                 print('\nOk, vamos calcular seu IMC!')
                 sleep(0.7)
@@ -31,22 +32,22 @@ while ctrlGeneral != 'out':
                 classIMC = CalcIMC.classificarIMC(imc = numIMC)
                 sleep(0.7)
                 print(classIMC)
-                ctrl = classIMC
+                ctrl = sairFunc
             except:
                 print('--------\nO valor digitado para peso(KG) ou altura(cm) deve ser um numero em formato de digito.\nVerifique e digite novamente.\n--------\n')
     elif op == '2':
-        while ctrl == '':
+        while ctrl != sairFunc:
             try:
                 print('\nOk, vamos ver sua taxa metabólica basal!')
                 sleep(0.7)
                 numTMB = CalcTaxaMetaBasal.CalcularTaxaBasal()
                 sleep(0.7)
                 print(f'---\nSua taxa metabólica basal é de: {numTMB:.2f} KCAL por dia.\n---')
-                ctrl = numTMB
+                ctrl = sairFunc
             except:
                 print('--------\nQualquer valor digitado para calcular sua TMB deve ser um numero em formato de digito.\nVerifique e digite novamente.\n--------\n')
     elif op == '3':
-        while ctrl == '':
+        while ctrl != sairFunc:
             try:
                 print('\nOk, vamos calcular quantas calorias tem seus alimentos!')
                 sleep(0.7)
@@ -54,17 +55,17 @@ while ctrlGeneral != 'out':
                 numKCAL = CalcMacronNutriente.calcularMacroNutri(foodName)
                 sleep(0.7)
                 print(f'---\nCalorias: {numKCAL:.2f} kcal.\n---')
-                ctrl = numKCAL
+                ctrl = sairFunc
             except:
                 print('--------\nQualquer valor digitado para calcular as calorias de seu alimento deve ser um numero em formato de digito.\nVerifique e digite novamente.--------')
     elif op == '4':
-         while ctrl == '':
+         while ctrl != sairFunc:
             try:
                 print('\nOk, vamos verificar os alimentos e seus grupos!')
-
+                sleep(0.7)
                 PlanilhasPythonTACO.planilhasTESTE()
-
-                ctrl = 'test'
+                sleep(0.7)
+                ctrl = sairFunc
             except:
                 print('--------\nQualquer valor digitado para calcular as calorias de seu alimento deve ser um numero em formato de digito.\nVerifique e digite novamente.--------')
     elif op == '5':
@@ -73,7 +74,7 @@ while ctrlGeneral != 'out':
 
                 MenuReceitas.MenuDeReceitas()
 
-                ctrl = 'test'
+                ctrl = sairFunc
             except:
                 print('--------Erro na receita.\nVerifique e digite novamente.--------')
     elif op == '6':
