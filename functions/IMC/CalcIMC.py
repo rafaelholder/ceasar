@@ -28,7 +28,7 @@ def classificarIMC(imc):
     salvarImc(imc)
     lerImc()
 
-    return '\nSeu IMC eh de: {:.1f} \nSua classificação eh: {}'.format(imc, classe)
+    return '\nSeu IMC é de: {:.1f} \nSua classificação é: {}'.format(imc, classe)
 
 #CONTROLE DE ARQUIVO
 filePath = './functions/IMC/IMC.txt'

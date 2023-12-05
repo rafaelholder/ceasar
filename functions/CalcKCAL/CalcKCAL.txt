@@ -1,2 +1,2 @@
 Alimento: Banana
-Calorias totais: 34.0
+Calorias totais: 56.0
