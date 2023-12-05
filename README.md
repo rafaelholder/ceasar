@@ -25,7 +25,7 @@ Navegue até o diretório do projeto e instale as dependências.
 
 ```bash
 cd ceasar
-start -r requirements.bat
+start requirements.bat
 ```
 
 ### Executando o Projeto
